@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //상속 
-public class Animal
+public class Animal //모노비헤이비어를 상속받지 않았기 때문에 다른 오브젝트에 스크립트를 붙일려고 해도 부품으로서의 기능을 받지 못 했기 때문에 안 들어간다.
 {
 
     public string name;
