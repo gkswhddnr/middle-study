@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+//레이캐스트
 public class RayInteraction : MonoBehaviour
 {
     //레이캐스트를 통해  눈앞에 있는 사물을 감지하고 옮기는 코드
