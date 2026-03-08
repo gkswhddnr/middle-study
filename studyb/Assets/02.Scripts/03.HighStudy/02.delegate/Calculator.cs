@@ -1,10 +1,10 @@
 using UnityEngine;
 
-//델리게이트(delegate)
+//델리게이트(delegate) 특정 형태의 함수를 저장하고 호출할 수 있는 타입
 public class Calculator : MonoBehaviour
 {
 
-    delegate float Calculate(float a, float b); //이건 그냥 타입
+    delegate float Calculate(float a, float b); //delegate 반환타입 델리게이트이름(매개변수);
 
     Calculate onCalculate;
 
