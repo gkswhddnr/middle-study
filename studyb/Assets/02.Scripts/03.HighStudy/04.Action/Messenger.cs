@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//람다식은 클릭 코드를 구현하기 위해 다음과 같은 상황에서 적극 활용한다
+// 1. 한 두줄로 이루어진 매서드 또는 프로퍼티 
+// 2. 특히 한줄로 이루어진 get 프로퍼티가 존재하는 경우
 public class Messenger : MonoBehaviour
 {
     public delegate void Send(string reciever);
@@ -20,6 +22,7 @@ public class Messenger : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+
         {
             onSend("JongWook");
         }
