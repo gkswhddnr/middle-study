@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+public class SManager : MonoBehaviour
 {
     public List<int> scores = new List<int>();
 
