@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+// 코루틴
+// 코루틴은 비동기 방식이다.
 
 public class HelloCoroutine : MonoBehaviour
 {
@@ -29,7 +31,7 @@ public class HelloCoroutine : MonoBehaviour
     {
         while (true) //원래 이렇게하면 무한으로 빠르게 돌아가서 터지지만 중간에 3초대기시간으로 인해 터지지않음
         {
-            yield return new WaitForSeconds(3f); //yield return null; 쉬는시간을 지정하지 않으면 대충 한프레임(1/60)을 쉬게된다 
+            yield return new WaitForSeconds(3f); //yield return null; 쉬는시간을 지정하지 않으면 대충 한프레임(1/60초)을 쉬게된다 
             Debug.Log("Hello Unity");
         }
    

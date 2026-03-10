@@ -8,14 +8,15 @@ public class PlayerHealth : MonoBehaviour
     public UnityEvent onPlayerDead;
 
     /*public UIManager uiManager;
-    public AchivementSystem achivementSystem;
-    public GameManager gameManager; */
+      public AchivementSystem achivementSystem;
+      public GameManager gameManager; */
 
     private void Dead()
     {
         /* uiManager.OnPlayerDead();
          gameManager.OnPlayerDead();
          achivementSystem.UnLockAchivement("레전드 도전과제");*/
+
         // 이벤트 기능을 사용하지 않으면 이렇게 위에처럼 변수로 다른스크립트를 다 가져온 뒤에 그 기능들을 하나하나 써야한다.
         // 이런식으로 하면 PlayerHealth 스크립트에 전혀 관련없는 애들이 막 엮여서 번잡해진다.
 

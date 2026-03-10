@@ -1,5 +1,6 @@
 using UnityEngine;
-
+// Publisher : 이벤트를 발생시키는 객체 (예: Monster)
+// Subscriber : 이벤트를 구독하고 반응하는 객체 (예: UI, ScoreManager)
 public class Character : MonoBehaviour
 {
     public delegate void Boost(Character target);

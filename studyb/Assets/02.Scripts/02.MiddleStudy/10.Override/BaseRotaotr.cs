@@ -15,7 +15,8 @@ public class BaseRotaotr : MonoBehaviour
     }
     protected virtual void Rotate()  //자식들이 커스텀 해야하는 동작 방식만 virtual로 덮어씌운다.
     {
-        transform.Rotate(speed * Time.deltaTime, 0, 0); // 이 친구는 지워도 아무런 상관이 없다 결국 Rotate라는 껍데기만 있고 그 안에 것은 자식들이 커스텀해서 사용하기 때문
+        // transform.Rotate(speed * Time.deltaTime, 0, 0);
+        // 이 친구는 지워도 아무런 상관이 없다 결국 Rotate라는 껍데기만 있고 그 안에 것은 자식들이 커스텀해서 사용하기 때문
     }
 
 }

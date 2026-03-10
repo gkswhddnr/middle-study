@@ -25,7 +25,9 @@ public class Booster : MonoBehaviour
 
         player.playerBoost += HealthBoost;
         player.playerBoost += ShieldBoost;
-        player.playerBoost += DamageBoost; 
+        player.playerBoost += DamageBoost;
+        // player.playerBoost = DamageBoost; event키워드를 쓰면 이게 에러가 뜬다.
+
 
     }
 

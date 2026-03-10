@@ -2,12 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+//Action의 정의
 public class Worker : MonoBehaviour
 {
     // delegate void Work(); // void를 return하고 () 입력이 없는 함수는 굉장히 많기 때문에 using System;을 넣어서 Action을 쓰는거다
-    // Action ->  delegate void Action(); 이거와 같다
+
+    // Action work;
+    // → delegate void Work();
+    //    Work work;
+
+    // Action<int> work;
+    // → delegate void Work(int a);
+    //    Work work;
+
+    // Action<int, int> work;
+    // → delegate void Work(int a, int b);
+    //    Work work;
     Action work;
+   
 
     void MoveBricks()
     {

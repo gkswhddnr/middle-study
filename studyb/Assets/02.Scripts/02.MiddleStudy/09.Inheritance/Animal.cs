@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //상속 
-public class Animal //모노비헤이비어를 상속받지 않았기 때문에 다른 오브젝트에 스크립트를 붙일려고 해도 부품으로서의 기능을 받지 못 했기 때문에 안 들어간다.
+public class Animal 
+//모노비헤이비어를 상속받지 않았기 때문에 다른 오브젝트에 스크립트를 붙일려고 해도 부품으로서의 기능을 받지 못 했기 때문에 안 들어간다.
 {
 
     public string name;
@@ -23,10 +24,7 @@ public class Animal //모노비헤이비어를 상속받지 않았기 때문에 다른 오브젝트에 스
     private float CalcSpeed()
     {
           return 100f / (weight * year);
-        
-
     }
-
 }
 //샌드박스 패턴: 미리 필요한 기능들을 부모 클래스에 몰아넣고 자식클래스에서 부모 클래스에 기능을 마구잡이로 조합해서 자기만의 기능을 만드는 것 
 public class Dog:Animal //이 dog는 animal 클래스를 상속한다  

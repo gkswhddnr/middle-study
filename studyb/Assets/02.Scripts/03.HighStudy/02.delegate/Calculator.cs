@@ -4,7 +4,8 @@ using UnityEngine;
 public class Calculator : MonoBehaviour
 {
 
-    delegate float Calculate(float a, float b); //delegate 반환타입 델리게이트이름(매개변수);
+    delegate float Calculate(float a, float b); 
+    //delegate 반환타입 델리게이트이름(매개변수);
 
     Calculate onCalculate;
 
@@ -38,7 +39,8 @@ public class Calculator : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Sum(1,10)
-           Debug.Log("결과값" + onCalculate(1, 10)); //리턴값은 마지막으로 실행된 친구의 리턴값만 가져온다 그래서 Multiply값이 디버그 로그로 나옴
+           Debug.Log("결과값" + onCalculate(1, 10));
+            //리턴값은 마지막으로 실행된 친구의 리턴값만 가져온다 그래서 Multiply값이 디버그 로그로 나옴
         }
     }
 }

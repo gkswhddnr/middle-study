@@ -26,6 +26,7 @@ public class RayInteraction : MonoBehaviour
  ├ distance(레이 시작점에서 충돌까지 거리)*/
     void Update()
     {
+        // ViewportToWorldPoint 카메라상의 위치를 찍어주면 그 위치가 실제 게임상에서 어떤 위치인지 알려주는 함수
         Vector3 rayOrigin = playerCam.ViewportToWorldPoint(new Vector3(0.5f,0.5f,0f));
         Vector3 rayDir = playerCam.transform.forward;
 
@@ -34,7 +35,9 @@ public class RayInteraction : MonoBehaviour
         {
            
             RaycastHit hit; // 레이캐스트에 의한 정보를 담아다주는 단순 정보 컨테이너
-            if (Physics.Raycast(rayOrigin, rayDir, out hit, distance, whatIsTarget)) //(광선출발위치,광선방향,out ,광선거리,광선레이어필터) out은 입력으로 들어간 값이 내부에서 어떤 값이 생겨서 빠져나가는 것
+            if (Physics.Raycast(rayOrigin, rayDir, out hit, distance, whatIsTarget))
+                // 이렇게 말고 Ray ray = new Ray(rayOrigin, rayDir); 한 다음에 저거 두개 뺴고 ray 하나만 넣어줘도 된다.
+        //(광선출발위치,광선방향,out hitinfo ,광선거리,광선레이어필터) out은 입력으로 들어간 값이 내부에서 어떤 값이 생겨서 빠져나가는 것
             {
                 GameObject hitTarget = hit.collider.gameObject;
 
