@@ -20,6 +20,8 @@ GameCodingTest/
   04_graphics.md                 # 그래픽스 8문제 (셰이더, 파이프라인, 블렌딩)
   05_mobile_optimization.md      # 모바일 최적화 8문제 (Draw Call, GC, 메모리)
   06_company_style.md            # 회사 스타일 모의 12문제 (Nexon/Kakao/Krafton/Devsisters 등)
+  07_cs_quiz.md                  # CS 객관식 25문제 (OS/네트워크/DB/그래픽스심화/알고리즘) — 컴투스 직격
+  COMTUS_PLAN.md                 # 컴투스 8기 인턴 2주 학습 계획 (6/7 시험)
   solutions/
     01_basic_solutions.md
     02_intermediate_solutions.md
@@ -53,7 +55,7 @@ GameCodingTest/
 
 기초 → 중급 → 고급 풀고, 모바일 최적화로 실무 감각 키운 뒤, 그래픽스로 깊이 더하고, 마지막에 지원하는 회사 스타일에 맞춰 06번에서 모의 훈련.
 
-## 총 문제 수: 108문제
+## 총 문제 수: 133문제
 
 - 기초: **60문제** — B1~B20(정규, 각 15~20분), B21~B40(워밍업, 각 5~10분), B41~B60(확장 워밍업, 각 5~15분)
 - 중급: 10문제 (각 30~45분 목표)
@@ -61,6 +63,7 @@ GameCodingTest/
 - 그래픽스: 8문제 (각 20~60분 목표 — 개념 답안은 글로)
 - 모바일 최적화: 8문제 (각 20~40분 목표)
 - 회사 스타일 모의: 12문제 (Nexon/NHN/Netmarble/Line/Kakao/Krafton/Smilegate/Comtus/Devsisters/Pearl Abyss/Joycity/Bungie/Riot 스타일)
+- CS 객관식: **25문제** (OS 5 / 네트워크 5 / DB 4 / 그래픽스 심화 6 / 알고리즘 5) — 컴투스 8기 인턴 직격
 
 > **B21~B40 워밍업 문제**는 매일 풀기 시작할 때 손 푸는 용도로 좋아요. 평균 5~10분, 다 풀어도 1~2시간.
 > **06번 회사 스타일**은 지원할 회사가 정해진 직전에 그 스타일만 골라 풀면 효율적이에요.
