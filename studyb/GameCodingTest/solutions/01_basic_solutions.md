@@ -962,21 +962,32 @@ public class SoundController : MonoBehaviour {
 ## B49. 데미지 계산
 
 ```csharp
-public static int CalcDamage(int atk, int def, bool isCritical) {
-    int dmg = Math.Max(1, atk - def);
-    if (isCritical) dmg *= 2;
-    return dmg;
-}
-
-public static int CalcDamageWithPen(int atk, int def, float pen, bool isCritical) {
-    int effectiveDef = (int)(def * (1f - Mathf.Clamp01(pen)));
-    int dmg = Math.Max(1, atk - effectiveDef);
-    if (isCritical) dmg *= 2;
-    return dmg;
+public class Solution {
+    public int solution(int atk, int def, bool isCritical) {
+        int dmg = Mathf.Max(atk - def, 1);
+        if (isCritical) dmg *= 2;
+        return dmg;
+    }
 }
 ```
 
-**팁:** `Mathf.Clamp01`로 pen이 0~1 범위 벗어나도 안전. 음수 관통이나 100% 초과 관통을 의도적으로 허용하려면 빼면 됨.
+**관용구 3가지:**
+1. **최소값 보정** = `Mathf.Max(계산값, 최소값)` 한 줄
+2. `if (조건 == true)` 쓰지 말 것 → `if (조건)`
+3. `if-else` 양쪽에 return 두지 말고, **변수에 누적 후 마지막에 한 번만 return**
+
+**확장 버전 (방어 관통 `pen` 0~1):**
+```csharp
+public class Solution {
+    public int solution(int atk, int def, float pen, bool isCritical) {
+        int effectiveDef = (int)(def * (1f - Mathf.Clamp01(pen)));
+        int dmg = Mathf.Max(atk - effectiveDef, 1);
+        if (isCritical) dmg *= 2;
+        return dmg;
+    }
+}
+```
+- `Mathf.Clamp01`로 pen이 0~1 범위 벗어나도 안전.
 
 ---
 
@@ -1102,13 +1113,20 @@ public static bool AABBOverlap(
 ## B57. 원 안 점
 
 ```csharp
-public static bool PointInCircle(float px, float py, float cx, float cy, float r) {
-    float dx = px - cx, dy = py - cy;
-    return dx*dx + dy*dy <= r*r; // 양변 제곱
+public class Solution {
+    public bool solution(float px, float py, float cx, float cy, float r) {
+        float dx = px - cx;
+        float dy = py - cy;
+        return dx * dx + dy * dy <= r * r;
+    }
 }
 ```
 
-**관용구:** Sqrt는 비싸니까 비교는 제곱으로. B8과 같은 원리.
+**관용구 2가지:**
+1. **Sqrt 회피** — 거리·반지름 비교는 양변 제곱해서 곱셈만 사용. Sqrt는 10배 비싼 연산.
+2. **`bool` 반환은 직접 비교식으로** — `if (조건) return true; return false;` → **`return 조건;`** 한 줄로.
+
+**Unity 관용:** `Vector3.sqrMagnitude` / `Vector2.sqrMagnitude`도 같은 원리. 핫루프(매 프레임 수천 적과 충돌 검사 등)에서 5~10배 빠름.
 
 ---
 
